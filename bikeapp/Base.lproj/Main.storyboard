@@ -1,24 +1,505 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ga9-g4-clt">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="bikeapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bikeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="DfW-Py-e5o">
+                                <rect key="frame" x="16" y="148" width="130" height="83"/>
+                                <color key="tintColor" name="AppTintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DfW-Py-e5o" secondAttribute="height" multiplier="130:83" id="Uvr-vz-WGu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to bikeapp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jB7-2l-0L1">
+                                <rect key="frame" x="16" y="269" width="343" height="32.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="27"/>
+                                <color key="textColor" name="AppTintColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jb2-zc-zIk" customClass="RoundedCornerButton" customModule="bikeapp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="703" width="343" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="tP7-S5-sZW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="tintColor" name="AppTintColor"/>
+                                <state key="normal" title="Create Account"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="AppTintColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="vEB-bH-eSE" kind="show" id="2v3-lF-HfN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="AppBackground"/>
+                        <constraints>
+                            <constraint firstItem="DfW-Py-e5o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="BIB-s1-aLi"/>
+                            <constraint firstItem="DfW-Py-e5o" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.346667" id="ChE-Nr-oi9"/>
+                            <constraint firstItem="jb2-zc-zIk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Obw-VS-ecV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jb2-zc-zIk" secondAttribute="bottom" constant="12" id="gNX-vZ-6OA"/>
+                            <constraint firstItem="jB7-2l-0L1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kFa-I7-g02"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jb2-zc-zIk" secondAttribute="trailing" constant="16" id="p9T-Wh-KEM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jB7-2l-0L1" secondAttribute="trailing" constant="16" id="rXM-gA-pSW"/>
+                            <constraint firstItem="jB7-2l-0L1" firstAttribute="top" secondItem="DfW-Py-e5o" secondAttribute="bottom" constant="38" id="tAU-cV-Zb0"/>
+                            <constraint firstItem="DfW-Py-e5o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="xkA-kK-V64"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="hJW-Jj-fQ2">
+                        <barButtonItem key="rightBarButtonItem" title="Log in" id="Xyd-rz-hqP">
+                            <color key="tintColor" name="AppTintColor"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
+        </scene>
+        <!--What is your name?-->
+        <scene sceneID="drk-Ck-lec">
+            <objects>
+                <viewController title="What is your name?" id="vEB-bH-eSE" customClass="NameViewController" customModule="bikeapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CsQ-0y-W7j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtY-HP-Ho7" customClass="RoundedCornerButton" customModule="bikeapp" customModuleProvider="target">
+                                <rect key="frame" x="321" y="729" width="38" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="5lR-vZ-vjq"/>
+                                    <constraint firstAttribute="height" constant="38" id="lfL-rZ-dG1"/>
+                                </constraints>
+                                <color key="tintColor" name="AppTintColor"/>
+                                <state key="normal" image="Arrow"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="AppTintColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="5Bm-ig-NUH" kind="show" id="Xdb-u1-kB9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vWF-7R-ULB"/>
+                        <color key="backgroundColor" name="AppBackground"/>
+                        <constraints>
+                            <constraint firstItem="vWF-7R-ULB" firstAttribute="trailing" secondItem="AtY-HP-Ho7" secondAttribute="trailing" constant="16" id="KCL-jh-vA2"/>
+                            <constraint firstItem="vWF-7R-ULB" firstAttribute="bottom" secondItem="AtY-HP-Ho7" secondAttribute="bottom" constant="11" id="XfF-ac-Kku"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="What is your name?" id="kjU-Dn-Rv9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fqV-3J-Kd0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844" y="113.79310344827587"/>
+        </scene>
+        <!--What is your email?-->
+        <scene sceneID="POl-iQ-IGK">
+            <objects>
+                <viewController id="5Bm-ig-NUH" customClass="EmailViewController" customModule="bikeapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BNY-Jw-lR7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bo1-SZ-z9I" customClass="RoundedCornerButton" customModule="bikeapp" customModuleProvider="target">
+                                <rect key="frame" x="321" y="729" width="38" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="38" id="cI4-16-2ja"/>
+                                    <constraint firstAttribute="height" constant="38" id="gJr-De-s5b"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="jnc-ST-tB2"/>
+                                    <constraint firstAttribute="width" constant="38" id="wFY-yQ-zg8"/>
+                                </constraints>
+                                <color key="tintColor" name="AppTintColor"/>
+                                <state key="normal" image="Arrow"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="AppTintColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="uKs-0V-qZM" kind="show" id="prQ-oD-Fhb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fFZ-Jg-vl7"/>
+                        <color key="backgroundColor" name="AppBackground"/>
+                        <constraints>
+                            <constraint firstItem="fFZ-Jg-vl7" firstAttribute="trailing" secondItem="Bo1-SZ-z9I" secondAttribute="trailing" constant="16" id="1Gd-qu-LcB"/>
+                            <constraint firstItem="fFZ-Jg-vl7" firstAttribute="bottom" secondItem="Bo1-SZ-z9I" secondAttribute="bottom" constant="11" id="sg8-Vt-eZu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="What is your email?" id="yEO-n3-oOU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vQG-JK-b8H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2617" y="114"/>
+        </scene>
+        <!--What is your password?-->
+        <scene sceneID="9Nz-wc-SkN">
+            <objects>
+                <viewController id="uKs-0V-qZM" customClass="PasswordViewController" customModule="bikeapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xx3-u9-IHO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55W-0r-uHS" customClass="RoundedCornerButton" customModule="bikeapp" customModuleProvider="target">
+                                <rect key="frame" x="321" y="729" width="38" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="38" id="GmQ-g4-kHJ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="HOa-3z-8uZ"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="38" id="RUD-gR-pK2"/>
+                                    <constraint firstAttribute="height" constant="38" id="TY1-IX-hdw"/>
+                                    <constraint firstAttribute="width" constant="38" id="Wzm-YS-Bsg"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="38" id="qw0-10-nHZ"/>
+                                </constraints>
+                                <color key="tintColor" name="AppTintColor"/>
+                                <state key="normal" image="Arrow"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="AppTintColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="7Ek-pD-17c" kind="show" id="MhX-AN-OL0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Zv-p4-zuF"/>
+                        <color key="backgroundColor" name="AppBackground"/>
+                        <constraints>
+                            <constraint firstItem="6Zv-p4-zuF" firstAttribute="bottom" secondItem="55W-0r-uHS" secondAttribute="bottom" constant="11" id="Zj2-wo-FY5"/>
+                            <constraint firstItem="6Zv-p4-zuF" firstAttribute="trailing" secondItem="55W-0r-uHS" secondAttribute="trailing" constant="16" id="a5r-kl-iTf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="What is your password?" id="9U3-gB-d5E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lIq-Wz-Zkw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3386" y="114"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="xvX-f9-2F9">
+            <objects>
+                <viewController id="7Ek-pD-17c" customClass="HomeViewController" customModule="bikeapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h3v-m8-Tni">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qfr-xH-GPb" customClass="RoundedCornerImageView" customModule="bikeapp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="156" width="55" height="55"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="Amm-4I-Akn"/>
+                                    <constraint firstAttribute="height" constant="55" id="ogS-Tj-yMM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="XKk-dN-vZe">
+                                <rect key="frame" x="78.999999999999986" y="158" width="136.66666666666663" height="51"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntd-tY-h5O">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="26.333333333333332"/>
+                                        <color key="tintColor" name="AppTintColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        <color key="textColor" name="AppTintColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="bBa-iC-o8q" customClass="RoundedCornerView" customModule="bikeapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="29.333333333333343" width="65" height="21.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" text="$2.845" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yz3-8l-RNa">
+                                                <rect key="frame" x="10" y="2.9999999999999991" width="45" height="15.666666666666664"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="yz3-8l-RNa" firstAttribute="centerY" secondItem="bBa-iC-o8q" secondAttribute="centerY" id="3Gu-Fo-Xuh"/>
+                                            <constraint firstItem="yz3-8l-RNa" firstAttribute="width" secondItem="bBa-iC-o8q" secondAttribute="width" constant="-20" id="VvR-LA-ODk"/>
+                                            <constraint firstItem="yz3-8l-RNa" firstAttribute="height" secondItem="bBa-iC-o8q" secondAttribute="height" constant="-6" id="axl-2h-dwi"/>
+                                            <constraint firstItem="yz3-8l-RNa" firstAttribute="centerX" secondItem="bBa-iC-o8q" secondAttribute="centerX" id="uFo-Bk-9g3"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="-1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L4b-Ey-Qka">
+                                <rect key="frame" x="223.66666666666666" y="156" width="0.33333333333334281" height="55"/>
+                                <color key="backgroundColor" name="SeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="0.5" id="Clr-d6-N7y"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dJ-hX-9bM" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="234" width="375" height="502"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bP-DK-5HM" customClass="RoundedCornerView" customModule="bikeapp" customModuleProvider="target">
+                                <rect key="frame" x="247" y="164.66666666666666" width="112" height="37.666666666666657"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="otM-t6-Okv">
+                                        <rect key="frame" x="8" y="8.0000000000000018" width="96" height="21.666666666666671"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Discount" translatesAutoresizingMaskIntoConstraints="NO" id="DEz-gu-I3U">
+                                                <rect key="frame" x="0.0" y="0.0" width="26" height="21.666666666666668"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18FREE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xp4-1K-LSf">
+                                                <rect key="frame" x="34" y="0.0" width="62" height="21.666666666666668"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="AppTintColor"/>
+                                <constraints>
+                                    <constraint firstItem="otM-t6-Okv" firstAttribute="height" secondItem="9bP-DK-5HM" secondAttribute="height" constant="-16" id="Bww-Xi-nTj"/>
+                                    <constraint firstItem="otM-t6-Okv" firstAttribute="centerX" secondItem="9bP-DK-5HM" secondAttribute="centerX" id="CsY-4G-1Vw"/>
+                                    <constraint firstItem="otM-t6-Okv" firstAttribute="centerY" secondItem="9bP-DK-5HM" secondAttribute="centerY" id="KAK-u1-Pcu"/>
+                                    <constraint firstItem="otM-t6-Okv" firstAttribute="width" secondItem="9bP-DK-5HM" secondAttribute="width" constant="-16" id="PDW-M4-YLa"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iai-XW-4Ne" customClass="RoundedCornerButton" customModule="bikeapp" customModuleProvider="target">
+                                <rect key="frame" x="95" y="634" width="185" height="69"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="Xht-TO-OAa"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="  Unlock" image="ScanBarcode">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ev6-Im-pgG" customClass="RoundedCornerButton" customModule="bikeapp" customModuleProvider="target">
+                                <rect key="frame" x="29" y="644.66666666666663" width="48" height="48"/>
+                                <color key="backgroundColor" name="AppTintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="MDl-3Y-a4X"/>
+                                    <constraint firstAttribute="height" constant="48" id="nvR-F1-6fN"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" image="Location"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lda-BZ-6Te" customClass="RoundedCornerButton" customModule="bikeapp" customModuleProvider="target">
+                                <rect key="frame" x="298" y="644.66666666666663" width="48" height="48"/>
+                                <color key="backgroundColor" name="AppTintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="ZGa-iV-jPE"/>
+                                    <constraint firstAttribute="height" constant="48" id="qJA-lf-rAU"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" image="Settings"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBh-kM-dJR" customClass="RoundedCornerView" customModule="bikeapp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="716" width="375" height="96"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bM6-Dj-R9a">
+                                        <rect key="frame" x="60" y="15" width="255" height="32"/>
+                                        <segments>
+                                            <segment title="Scooter"/>
+                                            <segment title="Bike"/>
+                                            <segment title="Motorbike"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" name="AppTintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bM6-Dj-R9a" secondAttribute="trailing" constant="60" id="UXz-mj-ca3"/>
+                                    <constraint firstAttribute="height" constant="96" id="eWr-cB-PrB"/>
+                                    <constraint firstItem="bM6-Dj-R9a" firstAttribute="leading" secondItem="PBh-kM-dJR" secondAttribute="leading" constant="60" id="fa3-1y-tas"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="bM6-Dj-R9a" secondAttribute="bottom" constant="8" id="ofA-Pn-SA2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OjH-F8-nvx"/>
+                        <color key="backgroundColor" name="AppBackground"/>
+                        <constraints>
+                            <constraint firstItem="XKk-dN-vZe" firstAttribute="centerY" secondItem="Qfr-xH-GPb" secondAttribute="centerY" id="2aZ-Aa-vpZ"/>
+                            <constraint firstItem="Qfr-xH-GPb" firstAttribute="top" secondItem="OjH-F8-nvx" secondAttribute="top" constant="16" id="4Pi-ew-4Ia"/>
+                            <constraint firstItem="9bP-DK-5HM" firstAttribute="leading" secondItem="L4b-Ey-Qka" secondAttribute="trailing" constant="23" id="7IR-5b-4bb"/>
+                            <constraint firstItem="PBh-kM-dJR" firstAttribute="trailing" secondItem="OjH-F8-nvx" secondAttribute="trailing" id="9wf-94-WvG"/>
+                            <constraint firstItem="L4b-Ey-Qka" firstAttribute="centerY" secondItem="Qfr-xH-GPb" secondAttribute="centerY" id="BwM-ei-lUu"/>
+                            <constraint firstItem="OjH-F8-nvx" firstAttribute="trailing" secondItem="9bP-DK-5HM" secondAttribute="trailing" constant="16" id="FVV-oB-Csc"/>
+                            <constraint firstItem="Ev6-Im-pgG" firstAttribute="leading" secondItem="OjH-F8-nvx" secondAttribute="leading" constant="29" id="JQv-rM-b5U"/>
+                            <constraint firstItem="PBh-kM-dJR" firstAttribute="leading" secondItem="OjH-F8-nvx" secondAttribute="leading" id="MEQ-mh-Zfz"/>
+                            <constraint firstItem="5dJ-hX-9bM" firstAttribute="trailing" secondItem="OjH-F8-nvx" secondAttribute="trailing" id="Ohd-Al-iwg"/>
+                            <constraint firstItem="L4b-Ey-Qka" firstAttribute="height" secondItem="Qfr-xH-GPb" secondAttribute="height" id="Re8-Xc-c2Y"/>
+                            <constraint firstItem="Ev6-Im-pgG" firstAttribute="centerY" secondItem="Iai-XW-4Ne" secondAttribute="centerY" id="VkI-kg-UI9"/>
+                            <constraint firstItem="OjH-F8-nvx" firstAttribute="trailing" secondItem="lda-BZ-6Te" secondAttribute="trailing" constant="29" id="W78-gG-0ja"/>
+                            <constraint firstItem="Qfr-xH-GPb" firstAttribute="leading" secondItem="OjH-F8-nvx" secondAttribute="leading" constant="16" id="Wlc-Xy-103"/>
+                            <constraint firstItem="5dJ-hX-9bM" firstAttribute="top" secondItem="Qfr-xH-GPb" secondAttribute="bottom" constant="23" id="Xv4-y7-1sD"/>
+                            <constraint firstItem="XKk-dN-vZe" firstAttribute="height" secondItem="Qfr-xH-GPb" secondAttribute="height" constant="-4" id="ZIz-fn-NIn"/>
+                            <constraint firstItem="PBh-kM-dJR" firstAttribute="top" secondItem="5dJ-hX-9bM" secondAttribute="bottom" constant="-20" id="awW-xX-qSK"/>
+                            <constraint firstItem="5dJ-hX-9bM" firstAttribute="leading" secondItem="OjH-F8-nvx" secondAttribute="leading" id="bXy-6j-jUA"/>
+                            <constraint firstItem="XKk-dN-vZe" firstAttribute="leading" secondItem="Qfr-xH-GPb" secondAttribute="trailing" constant="8" id="fbw-o7-aU0"/>
+                            <constraint firstItem="PBh-kM-dJR" firstAttribute="top" secondItem="Iai-XW-4Ne" secondAttribute="bottom" constant="13" id="g2B-2W-ZQS"/>
+                            <constraint firstItem="lda-BZ-6Te" firstAttribute="leading" secondItem="Iai-XW-4Ne" secondAttribute="trailing" constant="18" id="gKN-4g-gnn"/>
+                            <constraint firstItem="9bP-DK-5HM" firstAttribute="centerY" secondItem="Qfr-xH-GPb" secondAttribute="centerY" id="goy-oR-nNT"/>
+                            <constraint firstItem="L4b-Ey-Qka" firstAttribute="leading" secondItem="XKk-dN-vZe" secondAttribute="trailing" constant="8" id="nIj-Xm-SBH"/>
+                            <constraint firstItem="lda-BZ-6Te" firstAttribute="centerY" secondItem="Iai-XW-4Ne" secondAttribute="centerY" id="omb-To-G1r"/>
+                            <constraint firstAttribute="bottom" secondItem="PBh-kM-dJR" secondAttribute="bottom" id="rHF-Uk-ngY"/>
+                            <constraint firstItem="Iai-XW-4Ne" firstAttribute="leading" secondItem="Ev6-Im-pgG" secondAttribute="trailing" constant="18" id="tOG-lu-VWk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vTA-ZF-H0u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4152.8000000000002" y="113.79310344827587"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6Ml-wd-aTs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ga9-g4-clt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="qSE-G3-fZB">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="AppTintColor"/>
+                        <color key="barTintColor" name="AppTintColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="AppTintColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                            <color key="textColor" name="AppTintColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="t3a-RZ-1h1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7kr-Qn-VQh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="55W-0r-uHS">
+            <size key="intrinsicContentSize" width="11" height="22"/>
+        </designable>
+        <designable name="AtY-HP-Ho7">
+            <size key="intrinsicContentSize" width="11" height="22"/>
+        </designable>
+        <designable name="Bo1-SZ-z9I">
+            <size key="intrinsicContentSize" width="11" height="22"/>
+        </designable>
+        <designable name="Ev6-Im-pgG">
+            <size key="intrinsicContentSize" width="20.666666666666668" height="22"/>
+        </designable>
+        <designable name="Iai-XW-4Ne">
+            <size key="intrinsicContentSize" width="90.333333333333329" height="24.333333333333332"/>
+        </designable>
+        <designable name="jb2-zc-zIk">
+            <size key="intrinsicContentSize" width="155" height="40"/>
+        </designable>
+        <designable name="lda-BZ-6Te">
+            <size key="intrinsicContentSize" width="22.666666666666668" height="22.666666666666668"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Arrow" width="11" height="18"/>
+        <image name="Discount" width="26" height="20"/>
+        <image name="Location" width="20.666666030883789" height="20.333333969116211"/>
+        <image name="ScanBarcode" width="24.333333969116211" height="24.333333969116211"/>
+        <image name="Settings" width="22.666666030883789" height="22.666666030883789"/>
+        <image name="bikeIcon" width="130" height="83"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppBackground">
+            <color red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppTintColor">
+            <color red="0.28235294117647058" green="0.80000000000000004" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SeparatorColor">
+            <color red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

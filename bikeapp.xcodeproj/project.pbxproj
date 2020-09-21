@@ -3,27 +3,55 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		321B0D7025191FBB0008ED72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0D6F25191FBB0008ED72 /* AppDelegate.swift */; };
 		321B0D7225191FBB0008ED72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0D7125191FBB0008ED72 /* SceneDelegate.swift */; };
-		321B0D7425191FBB0008ED72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0D7325191FBB0008ED72 /* ViewController.swift */; };
 		321B0D7725191FBB0008ED72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321B0D7525191FBB0008ED72 /* Main.storyboard */; };
 		321B0D7925191FBF0008ED72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 321B0D7825191FBF0008ED72 /* Assets.xcassets */; };
 		321B0D7C25191FBF0008ED72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321B0D7A25191FBF0008ED72 /* LaunchScreen.storyboard */; };
+		321B0D8F2519224D0008ED72 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0D8E2519224D0008ED72 /* LogInViewController.swift */; };
+		321B0D922519225A0008ED72 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0D912519225A0008ED72 /* LogInViewModel.swift */; };
+		321B0D95251922700008ED72 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0D94251922700008ED72 /* NameViewController.swift */; };
+		321B0D982519227B0008ED72 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0D972519227B0008ED72 /* EmailViewController.swift */; };
+		321B0D9B2519228A0008ED72 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0D9A2519228A0008ED72 /* PasswordViewController.swift */; };
+		321B0D9E251922960008ED72 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0D9D251922960008ED72 /* HomeViewController.swift */; };
+		321B0DA1251922A50008ED72 /* NameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0DA0251922A50008ED72 /* NameViewModel.swift */; };
+		321B0DA4251922AE0008ED72 /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0DA3251922AE0008ED72 /* EmailViewModel.swift */; };
+		321B0DA7251922B90008ED72 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0DA6251922B90008ED72 /* PasswordViewModel.swift */; };
+		321B0DAA251922C30008ED72 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0DA9251922C30008ED72 /* HomeViewModel.swift */; };
+		321B0DAD251931560008ED72 /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0DAC251931560008ED72 /* RoundedCornerView.swift */; };
+		321B0DB0251932270008ED72 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0DAF251932260008ED72 /* RoundImageView.swift */; };
+		321B0DB5251933C40008ED72 /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0DB4251933C40008ED72 /* RoundedCornerButton.swift */; };
+		E11CC21C89DF82678A3D07BB /* Pods_bikeapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FBFBA0E48C789A2B6760C1 /* Pods_bikeapp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		321B0D6C25191FBB0008ED72 /* bikeapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bikeapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		321B0D6F25191FBB0008ED72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		321B0D7125191FBB0008ED72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		321B0D7325191FBB0008ED72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		321B0D7625191FBB0008ED72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		321B0D7825191FBF0008ED72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		321B0D7B25191FBF0008ED72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		321B0D7D25191FBF0008ED72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		321B0D8E2519224D0008ED72 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		321B0D912519225A0008ED72 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		321B0D94251922700008ED72 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		321B0D972519227B0008ED72 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		321B0D9A2519228A0008ED72 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		321B0D9D251922960008ED72 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		321B0DA0251922A50008ED72 /* NameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewModel.swift; sourceTree = "<group>"; };
+		321B0DA3251922AE0008ED72 /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
+		321B0DA6251922B90008ED72 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
+		321B0DA9251922C30008ED72 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		321B0DAC251931560008ED72 /* RoundedCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
+		321B0DAF251932260008ED72 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		321B0DB4251933C40008ED72 /* RoundedCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
+		3286E63E120D066B7E96527F /* Pods-bikeapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bikeapp.release.xcconfig"; path = "Target Support Files/Pods-bikeapp/Pods-bikeapp.release.xcconfig"; sourceTree = "<group>"; };
+		65FBFBA0E48C789A2B6760C1 /* Pods_bikeapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bikeapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD136EC30842E6D5BEB2076A /* Pods-bikeapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bikeapp.debug.xcconfig"; path = "Target Support Files/Pods-bikeapp/Pods-bikeapp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E11CC21C89DF82678A3D07BB /* Pods_bikeapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +71,8 @@
 			children = (
 				321B0D6E25191FBB0008ED72 /* bikeapp */,
 				321B0D6D25191FBB0008ED72 /* Products */,
+				8AEC6D4C2B54E9E32AEF4F7A /* Pods */,
+				FF45EB154CFBB703E5D40749 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +89,74 @@
 			children = (
 				321B0D6F25191FBB0008ED72 /* AppDelegate.swift */,
 				321B0D7125191FBB0008ED72 /* SceneDelegate.swift */,
-				321B0D7325191FBB0008ED72 /* ViewController.swift */,
+				321B0D8C251922070008ED72 /* ViewControllers */,
+				321B0D8B251921F00008ED72 /* ViewModels */,
+				321B0D8A251921EA0008ED72 /* Models */,
+				321B0D89251921DD0008ED72 /* Views */,
 				321B0D7525191FBB0008ED72 /* Main.storyboard */,
 				321B0D7825191FBF0008ED72 /* Assets.xcassets */,
 				321B0D7A25191FBF0008ED72 /* LaunchScreen.storyboard */,
 				321B0D7D25191FBF0008ED72 /* Info.plist */,
 			);
 			path = bikeapp;
+			sourceTree = "<group>";
+		};
+		321B0D89251921DD0008ED72 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				321B0DAC251931560008ED72 /* RoundedCornerView.swift */,
+				321B0DAF251932260008ED72 /* RoundImageView.swift */,
+				321B0DB4251933C40008ED72 /* RoundedCornerButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		321B0D8A251921EA0008ED72 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		321B0D8B251921F00008ED72 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				321B0D912519225A0008ED72 /* LogInViewModel.swift */,
+				321B0DA0251922A50008ED72 /* NameViewModel.swift */,
+				321B0DA3251922AE0008ED72 /* EmailViewModel.swift */,
+				321B0DA6251922B90008ED72 /* PasswordViewModel.swift */,
+				321B0DA9251922C30008ED72 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		321B0D8C251922070008ED72 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				321B0D8E2519224D0008ED72 /* LogInViewController.swift */,
+				321B0D94251922700008ED72 /* NameViewController.swift */,
+				321B0D972519227B0008ED72 /* EmailViewController.swift */,
+				321B0D9A2519228A0008ED72 /* PasswordViewController.swift */,
+				321B0D9D251922960008ED72 /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8AEC6D4C2B54E9E32AEF4F7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD136EC30842E6D5BEB2076A /* Pods-bikeapp.debug.xcconfig */,
+				3286E63E120D066B7E96527F /* Pods-bikeapp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FF45EB154CFBB703E5D40749 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65FBFBA0E48C789A2B6760C1 /* Pods_bikeapp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 321B0D8025191FBF0008ED72 /* Build configuration list for PBXNativeTarget "bikeapp" */;
 			buildPhases = (
+				CD940A664F97439985BD1F17 /* [CP] Check Pods Manifest.lock */,
 				321B0D6825191FBB0008ED72 /* Sources */,
 				321B0D6925191FBB0008ED72 /* Frameworks */,
 				321B0D6A25191FBB0008ED72 /* Resources */,
+				9FC22875E4D5F2A9831D00FC /* [CP] Embed Pods Frameworks */,
+				EC3C874208A68ACDCF7FA68C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,14 +227,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9FC22875E4D5F2A9831D00FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bikeapp/Pods-bikeapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bikeapp/Pods-bikeapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bikeapp/Pods-bikeapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD940A664F97439985BD1F17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bikeapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC3C874208A68ACDCF7FA68C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bikeapp/Pods-bikeapp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bikeapp/Pods-bikeapp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bikeapp/Pods-bikeapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		321B0D6825191FBB0008ED72 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				321B0D7425191FBB0008ED72 /* ViewController.swift in Sources */,
+				321B0D922519225A0008ED72 /* LogInViewModel.swift in Sources */,
+				321B0DA4251922AE0008ED72 /* EmailViewModel.swift in Sources */,
+				321B0D982519227B0008ED72 /* EmailViewController.swift in Sources */,
+				321B0DB5251933C40008ED72 /* RoundedCornerButton.swift in Sources */,
+				321B0DB0251932270008ED72 /* RoundImageView.swift in Sources */,
 				321B0D7025191FBB0008ED72 /* AppDelegate.swift in Sources */,
+				321B0D9E251922960008ED72 /* HomeViewController.swift in Sources */,
+				321B0DAD251931560008ED72 /* RoundedCornerView.swift in Sources */,
+				321B0D9B2519228A0008ED72 /* PasswordViewController.swift in Sources */,
+				321B0DA1251922A50008ED72 /* NameViewModel.swift in Sources */,
+				321B0DAA251922C30008ED72 /* HomeViewModel.swift in Sources */,
 				321B0D7225191FBB0008ED72 /* SceneDelegate.swift in Sources */,
+				321B0D8F2519224D0008ED72 /* LogInViewController.swift in Sources */,
+				321B0D95251922700008ED72 /* NameViewController.swift in Sources */,
+				321B0DA7251922B90008ED72 /* PasswordViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +449,7 @@
 		};
 		321B0D8125191FBF0008ED72 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD136EC30842E6D5BEB2076A /* Pods-bikeapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +469,7 @@
 		};
 		321B0D8225191FBF0008ED72 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3286E63E120D066B7E96527F /* Pods-bikeapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
