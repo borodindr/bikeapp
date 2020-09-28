@@ -35,4 +35,10 @@ class RoundedCornerButton: UIButton {
         }
     }
     
+    override var isEnabled: Bool {
+        didSet {
+            layer.borderColor = isEnabled ? borderColor.cgColor : UIColor.systemGray.cgColor
+        }
+    }
+    
 }

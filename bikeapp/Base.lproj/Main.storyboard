@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Log In View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="bikeapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,12 +71,92 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="hJW-Jj-fQ2">
                         <barButtonItem key="rightBarButtonItem" title="Log in" id="Xyd-rz-hqP">
                             <color key="tintColor" name="AppTintColor"/>
+                            <connections>
+                                <segue destination="AN0-O3-8Dx" kind="show" identifier="toAuth" id="BOL-WW-Kg8"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
+        </scene>
+        <!--Authentication-->
+        <scene sceneID="96o-ZM-zXm">
+            <objects>
+                <viewController id="AN0-O3-8Dx" customClass="LogInViewController" customModule="bikeapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FNh-hC-m6j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3v-Pu-Tz7" customClass="RoundedCornerButton" customModule="bikeapp" customModuleProvider="target">
+                                <rect key="frame" x="321" y="729" width="38" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="afl-6V-TK4"/>
+                                    <constraint firstAttribute="width" constant="38" id="gpo-L8-wxf"/>
+                                </constraints>
+                                <color key="tintColor" name="AppTintColor"/>
+                                <state key="normal" image="Arrow"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="AppTintColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="7Ek-pD-17c" kind="show" identifier="toHome" id="X3S-MZ-KRd"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0C8-gI-6re" customClass="MaterialTextField" customModule="bikeapp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="156" width="343" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="upF-oB-fn3"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Email"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isEmailKeyboardType" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWx-Pv-nAi" customClass="MaterialTextField" customModule="bikeapp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="236" width="343" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="CyH-Ml-Yym"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Password"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPasswordContentType" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="G78-CK-tkN"/>
+                        <color key="backgroundColor" name="AppBackground"/>
+                        <constraints>
+                            <constraint firstItem="0C8-gI-6re" firstAttribute="top" secondItem="G78-CK-tkN" secondAttribute="top" constant="16" id="Fvb-fV-UEx"/>
+                            <constraint firstItem="G78-CK-tkN" firstAttribute="trailing" secondItem="p3v-Pu-Tz7" secondAttribute="trailing" constant="16" id="GLd-wN-r6J"/>
+                            <constraint firstItem="AWx-Pv-nAi" firstAttribute="top" secondItem="0C8-gI-6re" secondAttribute="bottom" constant="10" id="Se9-eh-0Jt"/>
+                            <constraint firstItem="AWx-Pv-nAi" firstAttribute="leading" secondItem="G78-CK-tkN" secondAttribute="leading" constant="16" id="aGY-cV-umw"/>
+                            <constraint firstItem="G78-CK-tkN" firstAttribute="trailing" secondItem="0C8-gI-6re" secondAttribute="trailing" constant="16" id="ebx-ns-f21"/>
+                            <constraint firstItem="G78-CK-tkN" firstAttribute="trailing" secondItem="AWx-Pv-nAi" secondAttribute="trailing" constant="16" id="f2f-7h-HkI"/>
+                            <constraint firstItem="0C8-gI-6re" firstAttribute="leading" secondItem="G78-CK-tkN" secondAttribute="leading" constant="16" id="rQk-Bz-OlN"/>
+                            <constraint firstItem="G78-CK-tkN" firstAttribute="bottom" secondItem="p3v-Pu-Tz7" secondAttribute="bottom" constant="11" id="uJK-yj-izF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Authentication" id="SGT-r6-ZGA"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="0C8-gI-6re" id="Ssq-Jb-2d3"/>
+                        <outlet property="passwordTextField" destination="AWx-Pv-nAi" id="OtT-kK-yQe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8At-1s-ELy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2924" y="-272"/>
         </scene>
         <!--What is your name?-->
         <scene sceneID="drk-Ck-lec">
@@ -86,42 +166,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtY-HP-Ho7" customClass="RoundedCornerButton" customModule="bikeapp" customModuleProvider="target">
-                                <rect key="frame" x="321" y="729" width="38" height="38"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUW-gm-BtA" customClass="MaterialTextField" customModule="bikeapp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="156" width="343" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="38" id="5lR-vZ-vjq"/>
-                                    <constraint firstAttribute="height" constant="38" id="lfL-rZ-dG1"/>
+                                    <constraint firstAttribute="height" constant="70" id="tLr-Cd-7rc"/>
                                 </constraints>
-                                <color key="tintColor" name="AppTintColor"/>
-                                <state key="normal" image="Arrow"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="-1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" name="AppTintColor"/>
-                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="First name"/>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="5Bm-ig-NUH" kind="show" id="Xdb-u1-kB9"/>
-                                </connections>
-                            </button>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSu-Bv-Bon" customClass="MaterialTextField" customModule="bikeapp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="236" width="343" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="dK6-VY-1Bj"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Last name"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vWF-7R-ULB"/>
                         <color key="backgroundColor" name="AppBackground"/>
                         <constraints>
-                            <constraint firstItem="vWF-7R-ULB" firstAttribute="trailing" secondItem="AtY-HP-Ho7" secondAttribute="trailing" constant="16" id="KCL-jh-vA2"/>
-                            <constraint firstItem="vWF-7R-ULB" firstAttribute="bottom" secondItem="AtY-HP-Ho7" secondAttribute="bottom" constant="11" id="XfF-ac-Kku"/>
+                            <constraint firstItem="DSu-Bv-Bon" firstAttribute="top" secondItem="yUW-gm-BtA" secondAttribute="bottom" constant="10" id="8KL-DY-8kC"/>
+                            <constraint firstItem="DSu-Bv-Bon" firstAttribute="leading" secondItem="vWF-7R-ULB" secondAttribute="leading" constant="16" id="Aqh-h4-9Tp"/>
+                            <constraint firstItem="yUW-gm-BtA" firstAttribute="leading" secondItem="vWF-7R-ULB" secondAttribute="leading" constant="16" id="Dof-Nu-S3l"/>
+                            <constraint firstItem="yUW-gm-BtA" firstAttribute="top" secondItem="vWF-7R-ULB" secondAttribute="top" constant="16" id="eT4-B1-nuL"/>
+                            <constraint firstItem="vWF-7R-ULB" firstAttribute="trailing" secondItem="yUW-gm-BtA" secondAttribute="trailing" constant="16" id="hLZ-s9-IbG"/>
+                            <constraint firstItem="vWF-7R-ULB" firstAttribute="trailing" secondItem="DSu-Bv-Bon" secondAttribute="trailing" constant="16" id="rRT-bh-QK5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="What is your name?" id="kjU-Dn-Rv9"/>
+                    <connections>
+                        <outlet property="firstNameTextField" destination="yUW-gm-BtA" id="Yl7-DQ-Uy4"/>
+                        <outlet property="lastNameTextField" destination="DSu-Bv-Bon" id="l0G-fP-usk"/>
+                        <segue destination="5Bm-ig-NUH" kind="show" identifier="toEmail" id="aZ6-x3-Gu6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqV-3J-Kd0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844" y="113.79310344827587"/>
+            <point key="canvasLocation" x="2149.5999999999999" y="466.99507389162562"/>
         </scene>
         <!--What is your email?-->
         <scene sceneID="POl-iQ-IGK">
@@ -131,44 +217,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bo1-SZ-z9I" customClass="RoundedCornerButton" customModule="bikeapp" customModuleProvider="target">
-                                <rect key="frame" x="321" y="729" width="38" height="38"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TgN-1I-epG" customClass="MaterialTextField" customModule="bikeapp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="156" width="343" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="38" id="cI4-16-2ja"/>
-                                    <constraint firstAttribute="height" constant="38" id="gJr-De-s5b"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="jnc-ST-tB2"/>
-                                    <constraint firstAttribute="width" constant="38" id="wFY-yQ-zg8"/>
+                                    <constraint firstAttribute="height" constant="70" id="QhI-BK-nWp"/>
                                 </constraints>
-                                <color key="tintColor" name="AppTintColor"/>
-                                <state key="normal" image="Arrow"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="-1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" name="AppTintColor"/>
-                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Email"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isEmailKeyboardType" value="YES"/>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="uKs-0V-qZM" kind="show" id="prQ-oD-Fhb"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fFZ-Jg-vl7"/>
                         <color key="backgroundColor" name="AppBackground"/>
                         <constraints>
-                            <constraint firstItem="fFZ-Jg-vl7" firstAttribute="trailing" secondItem="Bo1-SZ-z9I" secondAttribute="trailing" constant="16" id="1Gd-qu-LcB"/>
-                            <constraint firstItem="fFZ-Jg-vl7" firstAttribute="bottom" secondItem="Bo1-SZ-z9I" secondAttribute="bottom" constant="11" id="sg8-Vt-eZu"/>
+                            <constraint firstItem="TgN-1I-epG" firstAttribute="top" secondItem="fFZ-Jg-vl7" secondAttribute="top" constant="16" id="5zx-wr-Fpc"/>
+                            <constraint firstItem="fFZ-Jg-vl7" firstAttribute="trailing" secondItem="TgN-1I-epG" secondAttribute="trailing" constant="16" id="TcI-cE-qUB"/>
+                            <constraint firstItem="TgN-1I-epG" firstAttribute="leading" secondItem="fFZ-Jg-vl7" secondAttribute="leading" constant="16" id="UdN-Pd-I5a"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="What is your email?" id="yEO-n3-oOU"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="TgN-1I-epG" id="6kp-tK-tnf"/>
+                        <segue destination="uKs-0V-qZM" kind="show" identifier="toPassword" id="odb-tL-JeW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQG-JK-b8H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2617" y="114"/>
+            <point key="canvasLocation" x="2924" y="467"/>
         </scene>
         <!--What is your password?-->
         <scene sceneID="9Nz-wc-SkN">
@@ -178,46 +255,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55W-0r-uHS" customClass="RoundedCornerButton" customModule="bikeapp" customModuleProvider="target">
-                                <rect key="frame" x="321" y="729" width="38" height="38"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yov-lc-1Xd" customClass="MaterialTextField" customModule="bikeapp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="156" width="343" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="38" id="GmQ-g4-kHJ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="HOa-3z-8uZ"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="38" id="RUD-gR-pK2"/>
-                                    <constraint firstAttribute="height" constant="38" id="TY1-IX-hdw"/>
-                                    <constraint firstAttribute="width" constant="38" id="Wzm-YS-Bsg"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="38" id="qw0-10-nHZ"/>
+                                    <constraint firstAttribute="height" constant="70" id="9lh-Hu-wS8"/>
                                 </constraints>
-                                <color key="tintColor" name="AppTintColor"/>
-                                <state key="normal" image="Arrow"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="-1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" name="AppTintColor"/>
-                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Password"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPasswordContentType" value="YES"/>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="7Ek-pD-17c" kind="show" id="MhX-AN-OL0"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Zv-p4-zuF"/>
                         <color key="backgroundColor" name="AppBackground"/>
                         <constraints>
-                            <constraint firstItem="6Zv-p4-zuF" firstAttribute="bottom" secondItem="55W-0r-uHS" secondAttribute="bottom" constant="11" id="Zj2-wo-FY5"/>
-                            <constraint firstItem="6Zv-p4-zuF" firstAttribute="trailing" secondItem="55W-0r-uHS" secondAttribute="trailing" constant="16" id="a5r-kl-iTf"/>
+                            <constraint firstItem="Yov-lc-1Xd" firstAttribute="top" secondItem="6Zv-p4-zuF" secondAttribute="top" constant="16" id="Gbm-FD-EVw"/>
+                            <constraint firstItem="6Zv-p4-zuF" firstAttribute="trailing" secondItem="Yov-lc-1Xd" secondAttribute="trailing" constant="16" id="VHS-fz-ero"/>
+                            <constraint firstItem="Yov-lc-1Xd" firstAttribute="leading" secondItem="6Zv-p4-zuF" secondAttribute="leading" constant="16" id="hU6-kk-5FH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="What is your password?" id="9U3-gB-d5E"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="Yov-lc-1Xd" id="LUF-el-U6h"/>
+                        <segue destination="7Ek-pD-17c" kind="show" identifier="toHome" id="J4n-kc-22V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIq-Wz-Zkw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3386" y="114"/>
+            <point key="canvasLocation" x="3692" y="467"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="xvX-f9-2F9">
@@ -283,7 +349,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dJ-hX-9bM" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="234" width="375" height="494"/>
+                                <rect key="frame" x="0.0" y="234" width="375" height="474"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bP-DK-5HM" customClass="RoundedCornerView" customModule="bikeapp" customModuleProvider="target">
@@ -319,7 +385,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iai-XW-4Ne" customClass="RoundedCornerButton" customModule="bikeapp" customModuleProvider="target">
-                                <rect key="frame" x="95" y="626" width="185" height="69"/>
+                                <rect key="frame" x="95" y="606" width="185" height="69"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="69" id="Xht-TO-OAa"/>
@@ -335,7 +401,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ev6-Im-pgG" customClass="RoundedCornerButton" customModule="bikeapp" customModuleProvider="target">
-                                <rect key="frame" x="29" y="636.66666666666663" width="48" height="48"/>
+                                <rect key="frame" x="29" y="616.66666666666663" width="48" height="48"/>
                                 <color key="backgroundColor" name="AppTintColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="MDl-3Y-a4X"/>
@@ -350,7 +416,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lda-BZ-6Te" customClass="RoundedCornerButton" customModule="bikeapp" customModuleProvider="target">
-                                <rect key="frame" x="298" y="636.66666666666663" width="48" height="48"/>
+                                <rect key="frame" x="298" y="616.66666666666663" width="48" height="48"/>
                                 <color key="backgroundColor" name="AppTintColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="ZGa-iV-jPE"/>
@@ -365,26 +431,26 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBh-kM-dJR" customClass="RoundedCornerView" customModule="bikeapp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="708" width="375" height="104"/>
+                                <rect key="frame" x="0.0" y="688" width="375" height="124"/>
                                 <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bM6-Dj-R9a">
-                                        <rect key="frame" x="60" y="21" width="255" height="34"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5Q-wf-hVk" customClass="UnderlinedSegmentedControl" customModule="bikeapp" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="4" width="343" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="AppTintColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="33" id="lSm-oA-jdd"/>
+                                            <constraint firstAttribute="height" constant="70" id="lBP-a5-E7I"/>
                                         </constraints>
-                                        <segments>
-                                            <segment title="" image="Scooter"/>
-                                            <segment title="" image="Bike"/>
-                                            <segment title="" image="Moped"/>
-                                        </segments>
-                                    </segmentedControl>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="commaSeparatedImageNames" value="Scooter,Bike,Moped"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" name="AppTintColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="bM6-Dj-R9a" secondAttribute="trailing" constant="60" id="UXz-mj-ca3"/>
-                                    <constraint firstItem="bM6-Dj-R9a" firstAttribute="leading" secondItem="PBh-kM-dJR" secondAttribute="leading" constant="60" id="fa3-1y-tas"/>
-                                    <constraint firstItem="bM6-Dj-R9a" firstAttribute="top" secondItem="PBh-kM-dJR" secondAttribute="top" constant="21" id="i0D-fv-IxU"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="bM6-Dj-R9a" secondAttribute="bottom" constant="8" id="ofA-Pn-SA2"/>
+                                    <constraint firstItem="v5Q-wf-hVk" firstAttribute="top" secondItem="PBh-kM-dJR" secondAttribute="top" constant="4" id="0I7-ZG-hd2"/>
+                                    <constraint firstItem="v5Q-wf-hVk" firstAttribute="leading" secondItem="PBh-kM-dJR" secondAttribute="leading" constant="16" id="BYE-n7-vBy"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="v5Q-wf-hVk" secondAttribute="bottom" constant="8" id="LfK-tK-MDP"/>
+                                    <constraint firstAttribute="trailing" secondItem="v5Q-wf-hVk" secondAttribute="trailing" constant="16" id="his-nn-nPf"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -423,10 +489,17 @@
                             <constraint firstItem="Iai-XW-4Ne" firstAttribute="leading" secondItem="Ev6-Im-pgG" secondAttribute="trailing" constant="18" id="tOG-lu-VWk"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="qka-SC-gFD"/>
+                    <connections>
+                        <outlet property="currentLocationButton" destination="Ev6-Im-pgG" id="ibg-Jh-YJ7"/>
+                        <outlet property="fullNameLabel" destination="Ntd-tY-h5O" id="WNW-N5-PqE"/>
+                        <outlet property="mapView" destination="5dJ-hX-9bM" id="4Ux-tT-Q5v"/>
+                        <outlet property="profileImageView" destination="Qfr-xH-GPb" id="KwW-8Q-Y7Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTA-ZF-H0u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4152.8000000000002" y="113.79310344827587"/>
+            <point key="canvasLocation" x="4808.8000000000002" y="97.536945812807886"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6Ml-wd-aTs">
@@ -457,15 +530,6 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="55W-0r-uHS">
-            <size key="intrinsicContentSize" width="11" height="22"/>
-        </designable>
-        <designable name="AtY-HP-Ho7">
-            <size key="intrinsicContentSize" width="11" height="22"/>
-        </designable>
-        <designable name="Bo1-SZ-z9I">
-            <size key="intrinsicContentSize" width="11" height="22"/>
-        </designable>
         <designable name="Ev6-Im-pgG">
             <size key="intrinsicContentSize" width="20.666666666666668" height="22"/>
         </designable>
@@ -478,16 +542,19 @@
         <designable name="lda-BZ-6Te">
             <size key="intrinsicContentSize" width="22.666666666666668" height="22.666666666666668"/>
         </designable>
+        <designable name="p3v-Pu-Tz7">
+            <size key="intrinsicContentSize" width="11" height="22"/>
+        </designable>
     </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="X3S-MZ-KRd"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Arrow" width="11" height="18"/>
-        <image name="Bike" width="50" height="32.333332061767578"/>
         <image name="BikeLarge" width="130" height="83"/>
         <image name="Discount" width="26" height="20"/>
         <image name="Location" width="20.666666030883789" height="20.333333969116211"/>
-        <image name="Moped" width="43" height="33"/>
         <image name="ScanBarcode" width="24.333333969116211" height="24.333333969116211"/>
-        <image name="Scooter" width="39.333332061767578" height="34.333332061767578"/>
         <image name="Settings" width="22.666666030883789" height="22.666666030883789"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

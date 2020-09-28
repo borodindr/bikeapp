@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MaterialTextField" customModule="bikeapp" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="rYX-Ii-FKm"/>
+                <outlet property="placeholderLabel" destination="Vpm-Ba-Fpy" id="EdX-rr-t7m"/>
+                <outlet property="revealPasswordButton" destination="Tp1-kp-InC" id="KVm-Tz-sEd"/>
+                <outlet property="textField" destination="LUX-Hz-ACY" id="hLn-4n-SfD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ET9-9C-pzY">
+                    <rect key="frame" x="0.0" y="69" width="375" height="1"/>
+                    <color key="backgroundColor" systemColor="labelColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="AwU-0K-Ii7"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LUX-Hz-ACY">
+                    <rect key="frame" x="9" y="32" width="332" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="fOL-ur-B0t"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="placeholder text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpm-Ba-Fpy">
+                    <rect key="frame" x="9" y="0.0" width="357" height="23"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                    <color key="textColor" name="AppTintColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tp1-kp-InC">
+                    <rect key="frame" x="345" y="35.5" width="22" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="22" id="XLQ-jR-byS"/>
+                    </constraints>
+                    <state key="normal" image="RevealPassword"/>
+                    <connections>
+                        <action selector="revealPasswordButtonTapped:" destination="-1" eventType="touchUpInside" id="n8x-gT-oDJ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Vpm-Ba-Fpy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="9" id="01D-zO-t8N"/>
+                <constraint firstItem="LUX-Hz-ACY" firstAttribute="top" secondItem="Vpm-Ba-Fpy" secondAttribute="bottom" constant="9" id="0Vs-DV-BIC"/>
+                <constraint firstItem="ET9-9C-pzY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4S7-EK-jnr"/>
+                <constraint firstAttribute="bottom" secondItem="LUX-Hz-ACY" secondAttribute="bottom" constant="9" id="6A5-qQ-qwA"/>
+                <constraint firstAttribute="trailing" secondItem="Tp1-kp-InC" secondAttribute="trailing" constant="8" id="6Lp-G5-ywK"/>
+                <constraint firstItem="Tp1-kp-InC" firstAttribute="leading" secondItem="LUX-Hz-ACY" secondAttribute="trailing" constant="4" id="BJ7-Wg-bmq"/>
+                <constraint firstAttribute="bottom" secondItem="Vpm-Ba-Fpy" secondAttribute="bottom" constant="9" id="Nfm-vc-g6v"/>
+                <constraint firstItem="Tp1-kp-InC" firstAttribute="centerY" secondItem="LUX-Hz-ACY" secondAttribute="centerY" id="Psf-yf-Uzn"/>
+                <constraint firstAttribute="trailing" secondItem="ET9-9C-pzY" secondAttribute="trailing" id="jZ3-cx-Egc"/>
+                <constraint firstAttribute="trailing" secondItem="Vpm-Ba-Fpy" secondAttribute="trailing" constant="9" id="kS6-Bv-ALX"/>
+                <constraint firstItem="Vpm-Ba-Fpy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="muI-kH-O9D"/>
+                <constraint firstItem="LUX-Hz-ACY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="9" id="pUm-Av-CWi"/>
+                <constraint firstAttribute="bottom" secondItem="ET9-9C-pzY" secondAttribute="bottom" id="qE2-Bp-1Vv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Nfm-vc-g6v"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="-242.75362318840581" y="-140.625"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="RevealPassword" width="19" height="13"/>
+        <namedColor name="AppTintColor">
+            <color red="0.28235294117647058" green="0.80000000000000004" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

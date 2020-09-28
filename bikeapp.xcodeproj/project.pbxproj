@@ -25,8 +25,15 @@
 		321B0DAD251931560008ED72 /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0DAC251931560008ED72 /* RoundedCornerView.swift */; };
 		321B0DB0251932270008ED72 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0DAF251932260008ED72 /* RoundImageView.swift */; };
 		321B0DB5251933C40008ED72 /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0DB4251933C40008ED72 /* RoundedCornerButton.swift */; };
-		321B0DBE251945CF0008ED72 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0DBD251945CF0008ED72 /* MaterialTextField.swift */; };
 		321B0DC1251945FE0008ED72 /* UnderlinedSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0DC0251945FE0008ED72 /* UnderlinedSegmentedControl.swift */; };
+		3285F8E02520FCD6006CF5A3 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285F8DF2520FCD6006CF5A3 /* InputViewController.swift */; };
+		3285F8E425210D0E006CF5A3 /* MaterialTextField+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285F8E325210D0E006CF5A3 /* MaterialTextField+Rx.swift */; };
+		3285F8E92521160E006CF5A3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285F8E82521160E006CF5A3 /* String+Extension.swift */; };
+		3285F8ED25211826006CF5A3 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285F8EC25211826006CF5A3 /* ProfileManager.swift */; };
+		3285F8F025211C4F006CF5A3 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285F8EF25211C4F006CF5A3 /* Profile.swift */; };
+		3285F8FE25214574006CF5A3 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285F8FD25214574006CF5A3 /* UIViewController+Extension.swift */; };
+		32F960CA251E8166003A23DA /* MaterialTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32F960C9251E8166003A23DA /* MaterialTextField.xib */; };
+		32F960CD251E8170003A23DA /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F960CC251E8170003A23DA /* MaterialTextField.swift */; };
 		E11CC21C89DF82678A3D07BB /* Pods_bikeapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FBFBA0E48C789A2B6760C1 /* Pods_bikeapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,9 +58,16 @@
 		321B0DAC251931560008ED72 /* RoundedCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
 		321B0DAF251932260008ED72 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		321B0DB4251933C40008ED72 /* RoundedCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
-		321B0DBD251945CF0008ED72 /* MaterialTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
 		321B0DC0251945FE0008ED72 /* UnderlinedSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedSegmentedControl.swift; sourceTree = "<group>"; };
+		3285F8DF2520FCD6006CF5A3 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		3285F8E325210D0E006CF5A3 /* MaterialTextField+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MaterialTextField+Rx.swift"; sourceTree = "<group>"; };
+		3285F8E82521160E006CF5A3 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		3285F8EC25211826006CF5A3 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		3285F8EF25211C4F006CF5A3 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		3285F8FD25214574006CF5A3 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		3286E63E120D066B7E96527F /* Pods-bikeapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bikeapp.release.xcconfig"; path = "Target Support Files/Pods-bikeapp/Pods-bikeapp.release.xcconfig"; sourceTree = "<group>"; };
+		32F960C9251E8166003A23DA /* MaterialTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialTextField.xib; sourceTree = "<group>"; };
+		32F960CC251E8170003A23DA /* MaterialTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
 		65FBFBA0E48C789A2B6760C1 /* Pods_bikeapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bikeapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD136EC30842E6D5BEB2076A /* Pods-bikeapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bikeapp.debug.xcconfig"; path = "Target Support Files/Pods-bikeapp/Pods-bikeapp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +111,8 @@
 				321B0D8B251921F00008ED72 /* ViewModels */,
 				321B0D8A251921EA0008ED72 /* Models */,
 				321B0D89251921DD0008ED72 /* Views */,
+				3285F8E7252115F8006CF5A3 /* Services */,
+				3285F8E6252115F1006CF5A3 /* Extensions */,
 				321B0D7525191FBB0008ED72 /* Main.storyboard */,
 				321B0D7825191FBF0008ED72 /* Assets.xcassets */,
 				321B0D7A25191FBF0008ED72 /* LaunchScreen.storyboard */,
@@ -111,7 +127,10 @@
 				321B0DAC251931560008ED72 /* RoundedCornerView.swift */,
 				321B0DAF251932260008ED72 /* RoundImageView.swift */,
 				321B0DB4251933C40008ED72 /* RoundedCornerButton.swift */,
-				321B0DBD251945CF0008ED72 /* MaterialTextField.swift */,
+				32F960CC251E8170003A23DA /* MaterialTextField.swift */,
+				3285F8E325210D0E006CF5A3 /* MaterialTextField+Rx.swift */,
+				32F960C9251E8166003A23DA /* MaterialTextField.xib */,
+				3285F8DF2520FCD6006CF5A3 /* InputViewController.swift */,
 				321B0DC0251945FE0008ED72 /* UnderlinedSegmentedControl.swift */,
 			);
 			path = Views;
@@ -120,6 +139,7 @@
 		321B0D8A251921EA0008ED72 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3285F8EF25211C4F006CF5A3 /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,6 +166,23 @@
 				321B0D9D251922960008ED72 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3285F8E6252115F1006CF5A3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3285F8E82521160E006CF5A3 /* String+Extension.swift */,
+				3285F8FD25214574006CF5A3 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3285F8E7252115F8006CF5A3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3285F8EC25211826006CF5A3 /* ProfileManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		8AEC6D4C2B54E9E32AEF4F7A /* Pods */ = {
@@ -227,6 +264,7 @@
 			files = (
 				321B0D7C25191FBF0008ED72 /* LaunchScreen.storyboard in Resources */,
 				321B0D7925191FBF0008ED72 /* Assets.xcassets in Resources */,
+				32F960CA251E8166003A23DA /* MaterialTextField.xib in Resources */,
 				321B0D7725191FBB0008ED72 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,16 +342,22 @@
 				321B0DB0251932270008ED72 /* RoundImageView.swift in Sources */,
 				321B0D7025191FBB0008ED72 /* AppDelegate.swift in Sources */,
 				321B0DC1251945FE0008ED72 /* UnderlinedSegmentedControl.swift in Sources */,
+				3285F8FE25214574006CF5A3 /* UIViewController+Extension.swift in Sources */,
 				321B0D9E251922960008ED72 /* HomeViewController.swift in Sources */,
+				3285F8E92521160E006CF5A3 /* String+Extension.swift in Sources */,
 				321B0DAD251931560008ED72 /* RoundedCornerView.swift in Sources */,
+				3285F8ED25211826006CF5A3 /* ProfileManager.swift in Sources */,
+				32F960CD251E8170003A23DA /* MaterialTextField.swift in Sources */,
 				321B0D9B2519228A0008ED72 /* PasswordViewController.swift in Sources */,
 				321B0DA1251922A50008ED72 /* NameViewModel.swift in Sources */,
-				321B0DBE251945CF0008ED72 /* MaterialTextField.swift in Sources */,
 				321B0DAA251922C30008ED72 /* HomeViewModel.swift in Sources */,
 				321B0D7225191FBB0008ED72 /* SceneDelegate.swift in Sources */,
 				321B0D8F2519224D0008ED72 /* LogInViewController.swift in Sources */,
+				3285F8E02520FCD6006CF5A3 /* InputViewController.swift in Sources */,
 				321B0D95251922700008ED72 /* NameViewController.swift in Sources */,
+				3285F8F025211C4F006CF5A3 /* Profile.swift in Sources */,
 				321B0DA7251922B90008ED72 /* PasswordViewModel.swift in Sources */,
+				3285F8E425210D0E006CF5A3 /* MaterialTextField+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
